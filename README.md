@@ -1,3 +1,4 @@
+# Regerencia de Estudo Regex
 É uma linguagem para encontrar padrões de texto.
 O regex precisa do alvo, o padrão e uma regex engine.
 
