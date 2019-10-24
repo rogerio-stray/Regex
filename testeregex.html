@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Teste regex</title>
+</head>
+<body>
+  <div>
+    
+  </div>
+</body>
+<script>
+  var target = "11a22b33c";
+  // Primeira forma do regex. 
+  var pattern = '(\\d\\d)(\\w)';
+  var exp1 = new RegExp(pattern, 'g');
+  // Segunda forma do regex mais resumida. Mesma coisa que as duas linhas de cima.
+  var exp2 = /(\d\d)(\w)/g;
+
+  // Métodos do mundo JavaScript
+  
+  // exec, que executa o regex e devolve um array com as informações sobre o match.
+  var regex = /(\d\d)(\w)/g; // Regex com o pattern e 'g' para global.
+  var resultado = regex.exec('11a22b33c');
+  console.log(resultado);
+  // No console o resultado 0: é o primeio valor encontrado inteiro
+  // 1: é o primeiro grupo encontrado. Os dois digitos
+  // 2: é o segundo grupo encontrado. As letras word char.
+  /* Podemos fazer um laço de repetição para retornar todos os 
+     resultados encontrados e não so o primeiro. 
+  */
+  
+  /* Se precisar saber se algum resultado der match, podemos usar o text("") 
+     que retorna um booleano. 
+  */
+  console.log(regex.test('11a22b'));
+  // retorna true.
+
+  // Método de replace
+  // Podemos substituir um valor de alguma string com o .replace("", "");
+  var anoMesDia = "24-10-2019";
+  var regex = /-/g;
+
+  anoMesDia = anoMesDia.replace(regex, '/');
+  console.log(anoMesDia);
+  // Retorna a data com a barra. 
+</script>
+</html>
